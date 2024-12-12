@@ -74,6 +74,9 @@
                     </c:forEach>
                 </table>
             </div>
+            <div>
+                <a href="index.html" class="botonEnviar">Volver al Inicio</a>
+            </div>
         </div>
     </body>
 </html>

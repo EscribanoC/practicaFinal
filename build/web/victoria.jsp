@@ -17,7 +17,8 @@
         <div class="contenedorInicio">
             <h2>Victoria</h2>
             <h3>¡Gracias ${nombreJugador} , trajiste la felicidad a la navidad!</h3>
-            <a href="index.html">Volver</a>
+            <a href="index.html" class="botonEnviar">Volver</a>
         </div>
+            <img src="Imagenes/santa.gif">
     </body>
 </html>
