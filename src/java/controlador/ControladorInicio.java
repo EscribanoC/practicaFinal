@@ -30,9 +30,11 @@ public class ControladorInicio extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession sesion = request.getSession();
-        String nombreJugador = (String) request.getParameter("nombreJugador");
-        if ( nombreJugador!= null && !nombreJugador.isEmpty()) {
+        
+        HttpSession sesion = request.getSession();//Recoge la sesión
+        String nombreJugador = (String) request.getParameter("nombreJugador");//Recoge el parámetro nombre que se añadirá a la sesión
+        
+        if ( nombreJugador!= null && !nombreJugador.isEmpty()) {//Si es la primera vez que entre el parámetro nombre es igual a null por lo que no entra
             //Añade el nombre del jugador a la sesión
             sesion.setAttribute("nombreJugador", nombreJugador);
             //Crea la partida y la añade a la sesión
@@ -42,7 +44,7 @@ public class ControladorInicio extends HttpServlet {
             response.sendRedirect("ControladorTurno");
             return;
         }
-        getServletContext().getRequestDispatcher("/inicio.jsp").forward(request, response);
+        getServletContext().getRequestDispatcher("/inicio.jsp").forward(request, response);//Forward a la vista
     }
 
     // <editor-fold defaultstate="collapsed" desc="HttpServlet methods. Click on the + sign on the left to edit the code.">

@@ -31,8 +31,9 @@ public class ControladorTurno extends HttpServlet {
      */
     protected void processRequest(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        HttpSession sesion = request.getSession();
-        Partida partida = (Partida) sesion.getAttribute("partida");
+        
+        HttpSession sesion = request.getSession();//Recoge la sesión
+        Partida partida = (Partida) sesion.getAttribute("partida");//Guarda en una variable el atributo de la sesión partida
 
         if (request.getParameter("indiceFila") == null && request.getParameter("indiceColumna") == null) {//Si ambos parámetros son null(Primera vez que carga la página)
             getServletContext().getRequestDispatcher("/turno.jsp").forward(request, response);//Carga la vista
@@ -42,7 +43,7 @@ public class ControladorTurno extends HttpServlet {
         //Recoje los indices de la pieza a mover
         int indiceFila = Integer.parseInt(request.getParameter("indiceFila"));
         int indiceColumna = Integer.parseInt(request.getParameter("indiceColumna"));
-        partida.cambiarPieza(indiceFila, indiceColumna);
+        partida.cambiarPieza(indiceFila, indiceColumna);//Mueve la pieza con los índices recogidos
         partida.moverSanta();//Santa se mueve
         partida.moverGrinch();//El Grinch se mueve
         

@@ -51,11 +51,11 @@ public class Partida {
     /*Método que rellena el tablero(array bidimensional) con las piezas del ArrayList piezas
     habrá en cada columna cada una de las piezas desordenadas con respecto a la siguiente*/
     private void rellenarTablero(String[][] tablero) {
-        for (int i = 0; i < tablero.length; i++) {
-            ArrayList<String> piezasAleatorias = new ArrayList(piezas);
-            Collections.shuffle(piezasAleatorias);
-            for (int j = 0; j < tablero[i].length; j++) {
-                tablero[j][i] = piezasAleatorias.get(j);
+        for (int i = 0; i < tablero.length; i++) {//Recorre filas
+            ArrayList<String> piezasAleatorias = new ArrayList(piezas);//Crea una lista con la lista de las piezas
+            Collections.shuffle(piezasAleatorias);//Baraja la lista para poner las posiciones aleatorias
+            for (int j = 0; j < tablero[i].length; j++) {//Recorre columnas
+                tablero[j][i] = piezasAleatorias.get(j);//Añade los elementos de la lista barajados a cada posición del tablero
             }
         }
     }
@@ -164,11 +164,6 @@ public class Partida {
     }
 
     /* Método que comprueba el estado de las posiciones de Santa y el Grinch */
- /* TODO cambiar y adaptarlo devolviendo un valor para cada situación:
-        1. Si Santa gana.
-        2. Si el Grinch le coge.
-        3. Si no pasa ninguna de las dos.
-     */
     public int comprobarEstado() {
         if (santa[1] == tablero.length) {//Si santa gana
             return 1;
