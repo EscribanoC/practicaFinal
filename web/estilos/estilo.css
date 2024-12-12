@@ -1,0 +1,145 @@
+/*
+Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+Click nbfs://nbhost/SystemFileSystem/Templates/JSP_Servlet/CascadeStyleSheet.css to edit this template
+*/
+/* 
+    Created on : 8 dic 2024, 19:54:48
+    Author     : Carlos
+*/
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+body {
+    background-color: rgb(56, 36, 109);
+    width: 100%;
+    min-height: 100dvh;
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:30px;
+}
+
+.contenedorPrincipal {
+    background-image: url(../Imagenes/fondoContenedor.jpg);
+    background-size: cover;
+    background-position: left;
+    background-image: rgb(1, 1, 1);
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: darkslategrey;
+    width: 1600px;
+    padding: 30px;
+    padding-bottom: 100px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 10px rgb(0, 0, 0, 0.2);
+    border: 1px solid white;
+    color: rgb(255, 253, 205);
+}
+
+.contenedorInicio {
+    display: flex !important;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background-color: rgb(45, 17, 68);
+    box-shadow: 0 0 10px 10px rgb(0, 0, 0, 0.2);
+    width: fit-content;
+    padding: 30px;
+    padding-bottom: 60px;
+    border-radius: 10px;
+    color: white;
+}
+
+td {
+    position: relative;
+}
+
+.imagen {
+    width: 100px;
+}
+
+.santaInicio {
+    width: 100px;
+    height: 100px;
+}
+
+.santa {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.grinch {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.contenedorTablas {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    margin-top: 30px;
+    background-color: rgba(23, 17, 66, 0.774);
+    padding: 30px;
+    padding-right: 130px;
+    border-radius: 20px;
+
+}
+
+
+
+.tablaPartida {
+    width: 100px;
+    border-spacing: 0px;
+    border: 1px solid khaki;
+
+    form {
+        height: 100px;
+    }
+
+    td {
+        border: 1px solid khaki;
+        margin: 0px;
+        padding: 0px;
+    }
+}
+
+.tablaInicio {
+    height: 500px;
+    border-spacing: 0px;
+    td {
+        width: 100px;
+        height: 100px;
+        border: 0px;
+    }
+}
+
+.formularioInicio {
+    display: flex !important;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.inputNombre {
+    padding: 10px;
+}
+
+.botonEnviar {
+    padding: 10px;
+}
