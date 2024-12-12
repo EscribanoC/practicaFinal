@@ -34,6 +34,7 @@
             <p>4. Las piezas de arriba del tablero pueden conectar con las de abajo.</p>
             <p>5. Una vez esperado 2 turnos, el Grinch empezará a buscar a Santa. Tendra un movimiento por turno, y cómo es un tramposo
                 ignorará los caminos.</p>
+            <p>6. No se puede cambiar la pieza donde se encuentra el Grinch.</p>
         </div>
     </body>
 </html>
