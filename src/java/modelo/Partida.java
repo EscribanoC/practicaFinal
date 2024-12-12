@@ -167,9 +167,9 @@ public class Partida {
     public int comprobarEstado() {
         if (santa[1] == tablero.length) {//Si santa gana
             return 1;
-        } else if (santa[0] == grinch[0] && santa[1] == grinch[1]) {
+        } else if (santa[0] == grinch[0] && santa[1] == grinch[1]) {//Si santa pierde
             return -1;
-        } else {
+        } else {//Cada turno
             return 0;
         }
     }
